@@ -18,16 +18,16 @@ add_subdirectory(${EXTERNAL_DIR}/pybind11)
 add_subdirectory(C)
 
 # Create Python module with new name
-pybind11_add_module(cpyxdemo_python python/cpyxdemo_module.cpp)
+pybind11_add_module(noise_demo python/cpyxdemo_module.cpp)
 
 # Link against the CPYDemo library
-target_link_libraries(cpyxdemo_python PRIVATE cpydemo_lib)
+target_link_libraries(noise_demo PRIVATE cpydemo_lib)
 
 # Set C++ standard for the Python module
-set_target_properties(cpyxdemo_python PROPERTIES
+set_target_properties(noise_demo PROPERTIES
   CXX_STANDARD 11
   CXX_STANDARD_REQUIRED ON
 )
 
-# Rename the output Python module to cpyxdemo
-set_target_properties(cpyxdemo_python PROPERTIES OUTPUT_NAME "cpyxdemo")
+# Rename the output Python module to noise_demo
+set_target_properties(noise_demo PROPERTIES OUTPUT_NAME "noise_demo")
