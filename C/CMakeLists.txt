@@ -14,6 +14,8 @@ file(GLOB OPENSIMPLEX_SOURCES
 # Create shared library
 add_library(cpydemo_lib SHARED 
             src/CPYDemo.cpp
+            #src/TerrainGen.cpp
+            src/TerrainGen2DAnimation.cpp
             ${OPENSIMPLEX_SOURCES}
             )
 
